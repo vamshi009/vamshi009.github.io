@@ -1,31 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script>
-$(document).ready(function(){
-var header = $('body');
 
-var backgrounds = new Array(
-    'url(http://placekitten.com/100)'
-  , 'url(http://placekitten.com/200)'
-  , 'url(http://placekitten.com/300)'
-  , 'url(http://placekitten.com/400)'
-);
-
-var current = 0;
-
-function nextBackground() {
-    current++;
-    current = current % backgrounds.length;
-    header.css('background-image', backgrounds[current]);
-}
-setInterval(nextBackground, 1000);
-
-header.css('background-image', backgrounds[0]);
-});
-</script>
-</head>
 <body>
  <style>
 img {
@@ -39,10 +14,26 @@ h4 {text-align: center;}
 h4 {text-align: center;}
 h5 {text-align: center;}
 a {text-align: center;}
-  body { background-color:powderblue;}
+body { background-color:powderblue;}
+     
+div {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation-name: exampleorange;
+  animation-duration: 4s;
+}
+
+@keyframes exampleorange {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+
+     
 </style> 
  
 <img src="/vamshiprofile.jpg" alt="my profile pic"  width="320" height="320" >
+<div></div>
 <h1> VAMSHI KRISHNA SRIRANGAM </h1>
 
 <h4>B.Tech in Computer Science and Masters by Research in Compuatational Linguistics</h4>
